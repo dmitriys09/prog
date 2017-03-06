@@ -60,10 +60,10 @@ size_t vector_get_capacity(const intvector *V)
 
 int int_vector_get_item(const IntVector *V, size_t index)
 {
-	size_t item;
-	
-	printf("\nInput item: ");
-	scanf("%zd", &item);
-	*V[index]=item;
-	return V
+	return V->data[index-1];
+}
+
+void int_vector_set_item(intvector *v, size_t index, int item)
+{
+	V->data[index-1] = item;
 }
