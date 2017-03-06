@@ -32,3 +32,38 @@ void int_vector_free(intvector *V)
 	free(V->capacity);
 	free(V);
 }
+
+size_t vector_get_size(const intvector *V)
+{
+	if(V->size)
+	{
+		return V->size;
+	}
+	else
+	{
+		printf("\nERROR\n");
+		return NULL;
+	}
+size_t vector_get_capacity(const intvector *V)
+{
+	if(V->capacity)
+	{
+		return V->capacity;
+	}
+	else
+	{
+		printf("\nERROR\n");
+		return NULL;
+	}
+	
+}
+
+int int_vector_get_item(const IntVector *V, size_t index)
+{
+	size_t item;
+	
+	printf("\nInput item: ");
+	scanf("%zd", &item);
+	*V[index]=item;
+	return V
+}
