@@ -67,3 +67,17 @@ void int_vector_set_item(intvector *v, size_t index, int item)
 {
 	V->data[index-1] = item;
 }
+
+int int_vector_puch_back(intvector *V, int item)
+{
+	if(V->capacity)<=(V->size)
+	{
+		intvector *V=(intvector *V) realloc (sizeof(intvector), 2 * sizeof(intvector));
+		V->data[V->size] = item;
+	}
+	else
+	{
+		V->data[V->size] = item;
+	}
+	
+}
